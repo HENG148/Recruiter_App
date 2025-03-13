@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Merriweather_Sans } from "next/font/google";
+import { Merriweather_Sans } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/footer/Page";
+import Breadcrumbs from "@/components/Breadcrumbs";
 
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-const meeriweather = Merriweather_Sans({
+const merriweather = Merriweather_Sans({
   variable: "--font-merriweather_sans",
   subsets: ["latin", 'latin-ext'],
   weight: ['300', '400', '500', '600', '700', '800'],
@@ -27,10 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${meeriweather.variable} antialiased`}
+        className={`${merriweather.variable} antialiased`}
       >
-        <Header title="Logo" />
-        {children}
+        <div className="bg-gradient-to-b absolute w-full from-[#cde6ff] to-[#fff] h-96 pt-3">
+          <Header className="" title="Logo" />
+          {children}  
+          <Footer />
+        </div>
       </body>
     </html>
   );

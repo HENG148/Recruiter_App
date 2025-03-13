@@ -1,16 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dangrek&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
   body {
     @apply bg-[#fff] font-primary
   }
 
   .ff {
-    border: 4px solid #1A5276;
-    border-radius: 20px;
+    /* border: 4px solid #1A5276; */
+    border-radius: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
+  }
+
+  .qq:hover, 
+  .qq:focus {
+    border: 1px solid #000;
+  }
+
+  .qq::selection {
+    border: none;
+  }
+
+  .ft {
+    border: 1px solid #149AC5;
+    padding: 0.7rem 3rem ;
+    border-radius: 10px;
+  }
+
+  .z{
+    z-index: 1;
+  }
+
+  .rt {
+    /* border: 1px solid linear-gradient(to bottom#dedede);  */
+    border: 2px solid #dedede;
+  }
+
+  .poi {
+    height: 2px;
+    width: 5rem;
+    background-color: #149AC5;
+  }
+
+  .tr {
+    border: 3.5px solid #8ca8ba;
+    justify-items: center;
+    border-radius: 12px;
+    padding-top: 1.2rem;
+    padding-bottom: 0.8rem;
+    /* height: auto; */
+  }
+
+  .aa {
+    width: 16rem;
+    height: 8rem;
+    display: grid;
+    /* row-gap: -10rem; */
+  }
+
+  .w {
+    outline: 3px solid #1A5276;
+    border: none;
+    padding-top: 5px;
+    padding-bottom: 5px ;
+    width: 10rem;
+  }
+
+  .g {
+    width: 10rem;
+  }
+
+  .o {
+    outline: 1px solid #adacac;
+    border-radius: 6px;
+  }
+
+  .o:hover,
+  .o:focus {
+    outline: 1px solid #000;
+  }
+
+  .qc {
+    display: flex;
+    align-items: center;
+    column-gap: 0.8rem;
+  }
+
+  .yu {
+    font-size: 13px;
+    color: #1A5276;
+  }
+
+  .tyo {
+    /* width: 18.2rem; */
+    /* border: 2px solid #1A5276; */
+    padding-top: 1.5rem;
+    border-radius: 2.5rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2), 0px 2px 5px rgba(0, 0, 0, 0.06);
+    transition: box-shadow 0.3s ease-in-out;
+    border: 1px solid #adacac;
+    /* width: 20rem; */
+    /* padding-top: 1.5rem;
+    padding-bottom: 1.5rem; */
+    /* padding-left: 1.3rem; */
+    /* padding-left: 4rem;
+    padding-right: 4rem; */
+  }
+
+  .asx {
+    background-color: #dcdcda;
+    font-size: 14px;
+    border-radius: 10px;
+  }
+
+  .detail-div {
+    display: flex;
+    gap: 6px;
+  }
+
+  .detail-div button {
+    font-size: 14px;
+  }
+
+  .oqi {
+    background-color: #149AC5;
+    padding-left: 11px;
+    padding-right: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 15px;
+  }
+/* 
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: block;
+  }
+
+  .swiper-button-next.hidden,
+  .swiper-button-prev.hidden {
+    display: none !important;
+  } */
+
+  /* .god {
+    display: flex;
+    justify-content: center;
+  } */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 10% 3.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
   }
 }

@@ -1,31 +1,27 @@
-import { Container } from "./Container"
+import Link from 'next/link'
 import Logo from '../../public/10.png'
-import Link from "next/link";
-import Image from "next/image";
-import NavBar from "./NavBar";
+import Image from 'next/image'
+import NavBar from './NavBar'
 
 interface HeaderProps {
   title: string;
+  className: string;
 }
 
-const Header: React.FC<HeaderProps> = () => {
+const Header:React.FC<HeaderProps> = () => {
   return (
     <>
-      <Container>
-        <div className="ff flex items-center">
+      <div className='rounded-[40px] py-2 bg-[#fff] w-auto mx-[18.5rem]'> {/* using fixed */}
+        <div className='flex items-center'>
           <Link href='/' legacyBehavior>
-            <Image
-              src={Logo}
-              alt="logo"
-              width={200}
-            />
+            <Image className=' cursor-pointer' src={Logo} alt='logo' width={200} />
           </Link>
 
-          <div className="hidden xl:flex">
+          <div className='hidden xl:flex'>
             <NavBar />
           </div>
         </div>
-      </Container>
+      </div>
     </>
   )
 }

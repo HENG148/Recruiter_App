@@ -1,4 +1,4 @@
-interface SliderType {
+export interface SliderType {
   id: number;
   image?: string;
   title?: string;
@@ -7,27 +7,27 @@ interface SliderType {
 export const SliderID: SliderType[] = [
   {
     id: 1,
-    image: '../../../public/slider.png',
+    image: '/slider.png',
     title: 'alert',
   },
   {
     id: 2,
-    image: '../../../public/slider.png',
+    image: '/slider.png',
     title: 'alert',
   },
   {
     id: 3,
-    image: '../../../public/slider.png',
+    image: '/slider.png',
     title: 'alert',
   },
   {
     id: 4,
-    image: '../../../public/slider.png',
+    image: '/slider.png',
     title: 'alert',
   },
   {
     id: 5,
-    image: '../../../public/slider.png',
+    image: '/slider.png',
     title: 'alert',
   },
 ]

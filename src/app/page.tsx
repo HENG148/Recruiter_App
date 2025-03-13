@@ -1,101 +1,73 @@
-import Image from "next/image";
+import Category from '@/components/Category';
+import ExpertList from '@/components/ExpertList';
+import JobList from '@/components/JobList';
+import InfoSlider from '@/components/slider/Slider';
+import Link from 'next/link';
+import React from 'react'
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+interface LinkButtonProps {
+  href: string;
+  text: string;
+  className?: string;
 }
+
+const LinkButton = ({ href, text, className }: LinkButtonProps) => {
+  return (
+    <Link href={href} className={`${className} text-default font-medium text-[19px] border-[1px] border-[#149ac5] px-12 py-3 rounded-[10px] hover:bg-accent-HOVER`}>
+      {text}
+    </Link>
+  )
+}
+
+interface HomeProps {}
+
+const Home = ({}: HomeProps) => {
+  return (
+    <main>
+      <div className='w-auto font-accent mx-[19rem] mt-7'>
+        <div className='justify-items-center grid grid-cols-1 gap-y-6 md:grid-cols-1'>
+          <InfoSlider title='News Slider' />
+          <LinkButton href='/' text='Create your Professional CV now!' />
+        </div>
+
+        <div className='mt-6 pb-5 border-[2px] shadow-[0px_0px_6px_#dedede] border-[#dedede] justify-items-center rounded-[9px] bg-[#fff]'>
+          <div className='w-[80rem] ml-9 py-4'>
+            <ExpertList className='' />
+          </div>
+          <div className='w-auto justify-items-center'>
+            <input
+              type='text'
+              placeholder='Search ......'
+              className='w-[77.9rem] h-10 text-[17px] px-8 o'
+            />
+          </div>
+          <div className='mt-4'>
+            <Category />
+          </div>
+        </div>
+
+        {/* JOB PAGE */}
+        <div className='mt-6'>
+          <p className='font-semibold text-2xl'>Job</p>
+          <JobList />
+        </div>
+
+        <div className='justify-items-center grid gap-y-1'>
+          <h3 className='text-[1.8rem] font-bold pb-3'>Feature On</h3>
+          <div className="poi"></div>
+          <p className="pt-3">
+            Astro HR is delighted to be covered by various Media. Our team adheres to six original core values.
+          </p>
+          <h4 className="w-[60%] ml-[1.5rem]">
+            (Teamwork, High Ambition, Strong Confident, Be the only ONE, Working Hard, and PDCA Quality Cycle)
+          </h4>
+          <p className="justify-items-center">
+            to ensure we deliver what we promise to ourselves and our customers.
+          </p>
+        </div>
+      </div>
+    </main>
+  )
+}
+
+export default Home
