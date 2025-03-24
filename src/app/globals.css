@@ -41,6 +41,59 @@
     border-radius: 10px;
   }
 
+  .swiper-pagination {
+    margin-top: 4rem;
+  }
+
+  .qqw {
+    width: 4rem;
+    background-color: #000;
+    height: 2px;
+  }
+
+  /* .ttq::before {
+    width: 100%;
+    height: 3px;
+    background-color: #000;
+    transform: scaleX(0);
+    transition: transform 0.2s linear;
+  }
+
+  .ttq:hover::before {
+    transform: scaleX(1);
+  } */
+
+  /* .ttq::after{
+    content: "";
+    position: absolute;
+    width: 4.3rem;
+    height: 3px;
+    background-color: #1A5276;
+    top: 139.2rem;
+    left: 19rem;
+    transition: all 0.3s; 
+  } */
+
+  .iim {
+    border: 1px solid #e2e2e2;
+    padding-bottom: 2rem;
+    border-radius: 20px;
+  }
+
+  .tvn p {
+    font-size: 0.9rem;
+    font-weight: 700;
+  }
+
+  .tvn span {
+    font-weight: 500;
+  }
+
+  .yyu {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .z{
     z-index: 1;
   }
@@ -119,6 +172,10 @@
     /* padding-left: 1.3rem; */
     /* padding-left: 4rem;
     padding-right: 4rem; */
+  }
+
+  .tty {
+    /* height: 15rem; */
   }
 
   .asx {

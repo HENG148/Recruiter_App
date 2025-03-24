@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Breadcrumbs: React.FC = () => {
-  const pathname = usePathname(); // This works in Next.js App Router (pages using "app" directory)
+  const pathname = usePathname();
   
-  if (!pathname) return null; // Ensure it's defined
+  if (!pathname) return null;
 
   const pathnames = pathname.split("/").filter((x) => x);
 
@@ -15,17 +15,17 @@ const Breadcrumbs: React.FC = () => {
 
   return (
     <div className="breadcrumbs">
-      <Link href="/">Home</Link>
+      <Link className="text-main font-semibold" href="/">Home</Link>
       {pathnames.map((name, index) => {
         breadcrumbPath += `/${name}`;
         const isLast = index === pathnames.length - 1;
 
         return isLast ? (
-          <span key={breadcrumbPath}> / {decodeURIComponent(name)}</span>
+          <span className=" pl-2 " key={breadcrumbPath}> / {decodeURIComponent(name)}</span>
         ) : (
-          <span key={breadcrumbPath}>
+          <span key={breadcrumbPath} className="pl-2 ">
             {" "}
-            / <Link href={breadcrumbPath}>{decodeURIComponent(name)}</Link>
+            / <Link className="pl-2 text-main font-semibold" href={breadcrumbPath}>{decodeURIComponent(name)}</Link>
           </span>
         );
       })}

@@ -2,8 +2,13 @@ import Category from '@/components/Category';
 import ExpertList from '@/components/ExpertList';
 import JobList from '@/components/JobList';
 import InfoSlider from '@/components/slider/Slider';
+import { LuSearch } from "react-icons/lu";
 import Link from 'next/link';
 import React from 'react'
+import StatsCount from '@/components/Stats';
+import SeekerVoice from '@/components/SeekVoice';
+import Media from './media/page';
+import MediaList from '@/components/MediaList';
 
 interface LinkButtonProps {
   href: string;
@@ -24,7 +29,7 @@ interface HomeProps {}
 const Home = ({}: HomeProps) => {
   return (
     <main>
-      <div className='w-auto font-accent mx-[19rem] mt-7'>
+      <div className='w-auto mx-[19rem] font-accent mt-7'>
         <div className='justify-items-center grid grid-cols-1 gap-y-6 md:grid-cols-1'>
           <InfoSlider title='News Slider' />
           <LinkButton href='/' text='Create your Professional CV now!' />
@@ -34,11 +39,12 @@ const Home = ({}: HomeProps) => {
           <div className='w-[80rem] ml-9 py-4'>
             <ExpertList className='' />
           </div>
-          <div className='w-auto justify-items-center'>
+          <div className='w-auto flex items-center justify-items-center'>
+            <LuSearch className='absolute ml-[1.3rem] text-[1.2rem]' />
             <input
               type='text'
-              placeholder='Search ......'
-              className='w-[77.9rem] h-10 text-[17px] px-8 o'
+              placeholder='Search Keyword ......'
+              className='w-[77.9rem] h-10 text-[17px] px-12 o'
             />
           </div>
           <div className='mt-4'>
@@ -51,14 +57,25 @@ const Home = ({}: HomeProps) => {
           <p className='font-semibold text-2xl'>Job</p>
           <JobList />
         </div>
+      </div>
+      <StatsCount />
 
-        <div className='justify-items-center grid gap-y-1'>
+      <div className='mx-[19rem]'>
+        <div className=''> {/* seeker voice */}
+          <SeekerVoice />
+        </div>
+
+        <div> {/* media */}
+          <MediaList />
+        </div>
+
+        <div className='justify-items-center grid gap-y-1 relative'>
           <h3 className='text-[1.8rem] font-bold pb-3'>Feature On</h3>
           <div className="poi"></div>
           <p className="pt-3">
             Astro HR is delighted to be covered by various Media. Our team adheres to six original core values.
           </p>
-          <h4 className="w-[60%] ml-[1.5rem]">
+          <h4 className="justify-items-center">
             (Teamwork, High Ambition, Strong Confident, Be the only ONE, Working Hard, and PDCA Quality Cycle)
           </h4>
           <p className="justify-items-center">
