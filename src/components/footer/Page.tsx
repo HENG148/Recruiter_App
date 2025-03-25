@@ -7,6 +7,7 @@ import facebook from '../../../public/icon/facebook.png'
 import telegram from '../../../public/icon/telegram1.png'
 import instagram from '../../../public/icon/instagram.png'
 import tiktok from '../../../public/icon/tik-tok1.png'
+import { FaRegCopyright } from "react-icons/fa";
 import { FaPhone } from "react-icons/fa6";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
@@ -56,7 +57,7 @@ const Footer = () => {
                 <p className='text-[#fff]'>Privacy Policy</p>
               </Link>
 
-              <p className='text-[#fff] mt-4'>2025 Astro HR ( Cambodia ) Co., Ltd. All Rights Reserved</p>
+              <p className='text-[#fff] mt-4 flex items-center gap-2'><FaRegCopyright />2025 Astro HR ( Cambodia ) Co., Ltd. All Rights Reserved</p>
             </div>
           </div>
         </div>

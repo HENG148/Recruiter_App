@@ -54,7 +54,7 @@ const mediaData: MediaItem[] = [
   },
 ]
 
-const MediaList:React.FC = () => {
+const MediaList: React.FC = () => {
   return (
     <section className='font-accent'>
       <div className='flex items-center justify-between'>
@@ -73,7 +73,7 @@ const MediaList:React.FC = () => {
       >
         {mediaData.map((media) => (
           <SwiperSlide key={media.id} className='iim mb-8'>
-            <Link href={`/media/${media.id}`}>
+            <Link href={`/media/${media.id}?title=${encodeURIComponent(media.title)}`}>
               <Image
                 className='h-[178.75px] w-[300px] object-cover rounded-[20px]' 
                 src={image}
