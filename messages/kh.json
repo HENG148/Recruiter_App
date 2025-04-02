@@ -1,0 +1,26 @@
+{
+  "Header": {
+    "home": "ទំព័រដើម",
+    "job": "ការងារ",
+    "media": "បណ្តាញសង្គម",
+    "about": "អំពីយើង",
+    "contact": "ទំនាក់ទំនង"
+  },
+  "HomePage" : {
+    "title": "ចំណងជើង",
+    "about": "ទាក់ទង",
+    "news-slider": "ផ្ទាំងស្លាយ",
+    "find-a-job": "ស្វែងរកការងារ"
+  },
+  "category": {
+    "industry": "ប្រភេទក្រុមហ៊ុន"
+  },
+  "Navigation": {
+    "title": "ចំណងជើង",
+    "home": "ផ្ទះ"
+  },
+  "LocaleSwitcher": {
+    "slider": "sdfsd",
+    "label": "label"
+  }
+}

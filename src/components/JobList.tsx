@@ -81,7 +81,10 @@ const JobList: React.FC = () => {
         {Object.entries(jobs).map(([category, jobList]) => (
           jobList.map((job) => (
             <div className="grid grid-cols-4">
-              <SwiperSlide key={job.id} className="justify-items-center pt-6 rounded-[2.5rem] shadow-[0px_4px_10px_rgba(0,0,0,0.2),0px_2px_5px_rgba(0,0,0,0.06)] border border-[#adacac] transition-shadow duration-300 ease-in-out">
+              <SwiperSlide
+                key={job.id}
+                className="justify-items-center pt-6 rounded-[2.5rem] border border-[#adadad] transition-shadow duration-300 ease-in-out"
+              > {/*shadow-[0px_5px_15px_rgba(0,0,0,0.25)]*/}
                 <div className="uio">
                   <Image src={image} width={240} className="rounded-[14px]" alt="Job Image" />
                   <div className="relative top-[-2.4rem] mb-[-0.9rem]">

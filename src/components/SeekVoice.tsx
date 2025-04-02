@@ -10,7 +10,7 @@ import { seekerData } from '../data/seekerData'
 const SeekerVoice:React.FC = () => {
   return (
     <>
-      <section className='mt-36 w-full font-accent'>
+      <section className='mt-32 w-full font-accent'>
         <p className='text-[1.6rem] font-bold mb-6'>Seeker's Voices</p>
         <Swiper
           spaceBetween={30}

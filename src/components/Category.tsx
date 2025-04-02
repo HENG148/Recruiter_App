@@ -1,9 +1,11 @@
 'use client'
 
 import { Select, SelectTrigger, SelectValue, SelectContent, SelectLabel, SelectItem, SelectGroup } from "@/components/ui/select";
+import { useTranslations } from "next-intl";
 import { IoLocationSharp } from "react-icons/io5";
 
 const Category = () => {
+  const t =  useTranslations('category');
   return (
     <>
       <div className='flex gap-[1.5rem]'>
@@ -11,7 +13,7 @@ const Category = () => {
           <SelectTrigger className="w-[18.4rem] text-[15px] py-5 border-[1px] border-[#adacac] qq">
             <div className="flex items-center gap-3">
               <IoLocationSharp className="text-[17px]" />
-              <SelectValue placeholder="Industry Unlimited" />
+              <SelectValue placeholder={t("industry")} />
             </div>
           </SelectTrigger>
           <SelectContent>

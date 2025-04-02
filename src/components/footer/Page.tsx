@@ -28,7 +28,7 @@ const Footer = () => {
           <div className='bg-[#fff] w-[5rem]'>
             <div className='w-[10rem] flex items-center gap-[3px]'>
               <Image className='w-5 bg-[#0078b6] py-1' src={linkedin} alt='' />
-              <p className='bg-[#0078B6] px-1 py-[1.2px] text-[#fff]'>Follow</p>
+              <p className='bg-[#0078B6] px-1 relative top-0 py-[1.9px] text-[#fff]'>Follow</p>
             </div>
             <CountUp className='pl-3' end={num} duration={4} delay={2} />
           </div>
@@ -38,16 +38,16 @@ const Footer = () => {
               <Link href='/' className='bg-[#505967] px-3 py-3 rounded-full'>
                 <Image className='w-8' src={linkedin} alt='' />
               </Link>
-              <Link href='/' className='bg-[#505967] px-[0.85rem] py-[0.85rem] rounded-full'>
+              <Link href='https://web.facebook.com/rong.sokheng.96' className='bg-[#505967] px-[0.85rem] py-[0.85rem] rounded-full'>
                 <Image className='w-7' src={facebook} alt='' />
               </Link>
-              <Link href='/' className='bg-[#505967] px-4 py-4 rounded-full'>
+              <Link href='https://www.instagram.com/__heng0_/' className='bg-[#505967] px-4 py-4 rounded-full'>
                 <Image className='w-6' src={instagram} alt='' />
               </Link>
-              <Link href='/' className='bg-[#505967] px-3 py-3 rounded-full'>
+              <Link href='https://t.me/HenGApril' className='bg-[#505967] px-3 py-3 rounded-full'>
                 <Image className='w-8' src={telegram} alt='' />
               </Link>
-              <Link href='/' className='bg-[#505967] px-4 py-4 rounded-full'>
+              <Link href='https://www.tiktok.com/@heng.png' className='bg-[#505967] px-4 py-4 rounded-full'>
                 <Image className='w-6' src={tiktok} alt='' />
               </Link>
             </div>

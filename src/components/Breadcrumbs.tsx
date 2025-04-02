@@ -3,19 +3,13 @@
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
 
-const mediaTitleMap = {
-  "100": "Public Innovation Awards",
-  "101": "Tech Summit 2025",
-  "102": "AI Breakthrough",
-};
-
 const Breadcrumbs: React.FC = () => {
 
   const pathname = usePathname();
   const searchParams = useSearchParams();
   if (!pathname) return null;
 
-  const pathnames = pathname.split("/").filter((x) => x);
+  const pathnames = pathname.split("/").filter((x) => x && x !== 'en'); // remove the 'en' from the link
 
   if (pathname === '/job') return null;
   let breadcrumbPath = "";
@@ -26,18 +20,7 @@ const Breadcrumbs: React.FC = () => {
       {pathnames.map((name, index) => {
         breadcrumbPath += `/${name}`;
         const isLast = index === pathnames.length - 1;
-
-        // if (isLast && name === 'media' && pathnames.length > 1) {
-        //   const mediaTitle = searchParams.get('title');
-        //   if (mediaTitle) {
-        //     return (
-        //       <span key={breadcrumbPath} className="pl-2">
-        //         {'/'}{decodeURIComponent(mediaTitle)}
-        //       </span>
-        //     )
-        //   }
-        // }
-
+        
         if (pathnames[0] === 'media' && index === 1) {
           const mediaTitle = searchParams.get('title');
           return (
@@ -47,17 +30,8 @@ const Breadcrumbs: React.FC = () => {
           )
         }
 
-        // if (pathnames[0] === "media" && index === 1) {
-        //   const mediaTitle = mediaTitleMap[name]; // Fetch the title based on the ID
-        //   return (
-        //     <span key={breadcrumbPath} className="pl-2">
-        //       {" / "}{mediaTitle ? mediaTitle : name}
-        //     </span>
-        //   );
-        // }
-
         return isLast ? (
-          <span className=" pl-2 " key={breadcrumbPath}> / {decodeURIComponent(name)}</span>
+          <span key={breadcrumbPath}> / {decodeURIComponent(name)}</span>
         ) : (
           <span key={breadcrumbPath} className="pl-2 ">
             {" "}
@@ -70,3 +44,14 @@ const Breadcrumbs: React.FC = () => {
 };
 
 export default Breadcrumbs;
+
+        // if (isLast && name === 'media' && pathnames.length > 1) {
+        //   const mediaTitle = searchParams.get('title');
+        //   if (mediaTitle) {
+        //     return (
+        //       <span key={breadcrumbPath} className="pl-2">
+        //         {'/'}{decodeURIComponent(mediaTitle)}
+        //       </span>
+        //     )
+        //   }
+        // }

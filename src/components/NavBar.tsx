@@ -1,5 +1,6 @@
 'use client'
 
+import { useTranslations } from 'next-intl';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useRouter } from 'next/router';
@@ -10,12 +11,11 @@ interface NavLink {
 }
 
 const links: NavLink[] = [
-  { name: 'Home', path: '/' },
-  { name: 'Job', path: '/job' },
-  { name: 'Media', path: '/media' },
-  // { name: 'Job Want', path: '/job_want' },
-  { name: 'About', path: '/abouts' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'home', path: '/' },
+  { name: 'job', path: '/job' },
+  { name: 'media', path: '/media' },
+  { name: 'about', path: '/abouts' },
+  { name: 'contact', path: '/contact' },
 ]
 
 const NavLinks = ({ href, children }: { href: string, children: React.ReactNode }) => {
@@ -32,6 +32,7 @@ const NavLinks = ({ href, children }: { href: string, children: React.ReactNode 
 const NavBar: React.FC = () => {
 
   const pathname = usePathname();
+  // const t =  useTranslations('Header');
 
   return (
     <nav className='font-primary flex gap-8 text-[1.1rem]'>
