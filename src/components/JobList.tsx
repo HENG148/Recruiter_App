@@ -69,7 +69,7 @@ const JobList: React.FC = () => {
   }, []);
 
   return (
-    <div>
+    <div className="font-accent">
       <Swiper
         spaceBetween={30}
         slidesPerView={4}

@@ -23,5 +23,9 @@
     "slider": "sdfsd",
     "label": "label",
     "locale": "{locale, select, Kh {🇰🇭 Khmer} en {🇬🇧 English} other {unknown}}"
+  },
+  "Log": {
+    "register": "Register",
+    "log-in": "Log in"
   }
 }

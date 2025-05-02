@@ -1,59 +1,54 @@
-'use client'
+'use client';
 
-import React from 'react'
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/pagination';
-import 'swiper/css'
+import 'swiper/css';
 import { Autoplay, Pagination, Navigation } from 'swiper/modules';
-import wingbank from '../../public/wingbank.png'
-import nike from '../../public/002-nike-logos-swoosh-white.png'
-import lucky from '../../public/Lucky-Supermarket-Logo-1140x800.png'
-import adidas from '../../public/Adidas_logo.png'
-import Image from 'next/image';
+import Image, { StaticImageData } from 'next/image';
+import wingbank from '../../public/wingbank.png';
+import nike from '../../public/002-nike-logos-swoosh-white.png';
+import adidas from '../../public/Adidas_logo.png';
 
-const Collaborative = () => {
+interface images {
+  src: StaticImageData;
+  alt: string;
+  className?: string;
+}
+
+const image:images[] = [
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: nike, alt: 'Nike Logo', className: 'w-[14rem] object-cover' },
+  { src: adidas, alt: 'Adidas Logo', className: 'w-[6rem] pt-7 justify-center ml-10 object-cover' },
+  { src: wingbank, alt: 'Lucky Supermarket Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+  { src: wingbank, alt: 'Wing Bank Logo', className: 'w-[14rem] object-cover' },
+]
+
+const Collaborative: React.FC = () => {
   return (
-    <>
-      <div className='w-full'>
-        <Swiper
-          modules={[Autoplay, Pagination, Navigation]}
-          slidesPerView={5}
-          scrollbar={{ draggable: true }}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-        >
-          <SwiperSlide className=''>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
+    <div className="w-full">
+      <Swiper
+        modules={[Autoplay, Pagination, Navigation]}
+        slidesPerView={5}
+        scrollbar={{ draggable: true }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+        }}
+      >
+        {image.map((img, idx) => (
+          <SwiperSlide key={idx}>
+            <Image src={img.src} className={img.className} alt={img.alt} />
           </SwiperSlide>
-          <SwiperSlide>
-            <Image src={nike} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={adidas} className='w-[6rem] pt-7 justify-center ml-10 object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-          <SwiperSlide>
-            <Image src={wingbank} className='w-[14rem] object-cover' alt='' />
-          </SwiperSlide>
-        </Swiper>
-      </div>
-    </>
+        ))}
+      </Swiper>
+    </div>
   )
 }
 

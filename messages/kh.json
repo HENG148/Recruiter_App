@@ -2,9 +2,9 @@
   "Header": {
     "home": "ទំព័រដើម",
     "job": "ការងារ",
-    "media": "បណ្តាញសង្គម",
+    "media": "ប្រព័ន្ធផ្សព្វផ្សាយ",
     "about": "អំពីយើង",
-    "contact": "ទំនាក់ទំនង"
+    "contact": "ទាក់ទង"
   },
   "HomePage" : {
     "title": "ចំណងជើង",
@@ -22,5 +22,9 @@
   "LocaleSwitcher": {
     "slider": "sdfsd",
     "label": "label"
+  },
+  "Log": {
+    "register": "ចុះឈ្មោះ",
+    "log-in": "ចូលគណនី"
   }
 }

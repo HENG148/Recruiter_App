@@ -35,7 +35,7 @@ const Footer = () => {
 
           <div> {/* social icon */}
             <div className='flex items-center gap-4'>
-              <Link href='/' className='bg-[#505967] px-3 py-3 rounded-full'>
+              <Link href='https://www.linkedin.com/in/rong-sokheng-a20512258/' className='bg-[#505967] px-3 py-3 rounded-full'>
                 <Image className='w-8' src={linkedin} alt='' />
               </Link>
               <Link href='https://web.facebook.com/rong.sokheng.96' className='bg-[#505967] px-[0.85rem] py-[0.85rem] rounded-full'>

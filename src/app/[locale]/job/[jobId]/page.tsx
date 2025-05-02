@@ -7,7 +7,7 @@ interface JobPageProps {
 
 // const DetailPage = async ({ params }: { params: { jobId: string } }) => {\
 const DetailPage = async ({params}: JobPageProps) => {
-  const {jobId} = await Promise.resolve(params)
+  const { jobId } = await Promise.resolve(params);
 
   return (
     <>

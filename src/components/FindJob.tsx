@@ -16,10 +16,10 @@ const FindJob: React.FC = () => {
         </div>
         <div className="mt-8">
           <p className="font-bold pb-[21.5px]">Search by Category</p>
-          <div className="grid grid-cols-2 ybv">
+          <div className="grid grid-cols-2 ">
             {jobCategories.map((category, idx) => (
               <Link key={idx} href={category.href}>
-                <p>{category.name}</p>
+                <p className="border border-[#dedfe0] h-[60px] grid items-center pl-[1.3rem] hover:bg-[#dedfe0] transition-all duration-100">{category.name}</p>
               </Link>
             ))}
           </div>
@@ -28,10 +28,10 @@ const FindJob: React.FC = () => {
 
       <div>
         <p className="font-bold mb-3">Popular Keywords</p>
-        <div className="grid grid-cols-2 ybv">
+        <div className="grid grid-cols-2 ">
           {popularKeywords.map((keyword, idx) => (
             <Link key={idx} href={keyword.href}>
-              <p>{keyword.name}</p>
+              <p className="border border-[#dedfe0] h-[60px] grid items-center pl-[1.3rem] hover:bg-[#dedfe0] transition-all duration-100">{keyword.name}</p>
             </Link>
           ))}
         </div>

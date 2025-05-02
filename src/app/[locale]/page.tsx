@@ -24,7 +24,7 @@ interface LinkButtonProps {
 
 const LinkButton = ({ href, text, className }: LinkButtonProps) => {
   return (
-    <Link href={href} className={`${className} text-default font-medium text-[17px] border-[1px] border-[#149ac5] px-10 py-3 rounded-[10px] hover:bg-accent-HOVER`}>
+    <Link href="/createCV" className={`${className} text-default font-medium text-[17px] border-[1px] border-[#149ac5] px-10 py-3 rounded-[10px] hover:bg-accent-HOVER`}>
       {text}
     </Link>
   )
@@ -35,8 +35,8 @@ interface HomeProps {}
 const Home = ({ }: HomeProps) => {
   const t =  useTranslations('HomePage');
   return (
-    <main>
-      <div className='w-auto mx-[19rem] font-accent mt-7'>
+    <main className="">
+      <div className='w-auto mx-[19rem] font-accent pt-[10rem]'>
         <div className='justify-items-center grid grid-cols-1 gap-y-1 md:grid-cols-1'>
           <InfoSlider title={t('news-slider')} />
           <Collaborative />
@@ -60,12 +60,8 @@ const Home = ({ }: HomeProps) => {
           </div>
         </div>
 
-        {/* <div>
-          <Listing />
-        </div> */}
-
         {/* JOB PAGE */}
-        <div className='mt-6'>
+        <div className='mt-6 '>
           <p className='font-semibold text-2xl mb-5'>Job</p>
           <JobList />
         </div>
@@ -98,7 +94,7 @@ const Home = ({ }: HomeProps) => {
               Astro HR is delighted to be covered by various Media. Our team adheres to six original core values.
             </p>
             <h4 className="justify-items-center">
-              (Teamwork, High Ambition, Strong Confident, Be the only ONE, Working Hard, and PDCA Quality Cycle)
+              ( Teamwork, High Ambition, Strong Confident, Be the only ONE, Working Hard, and PDCA Quality Cycle )
             </h4>
             <p className="justify-items-center">
               to ensure we deliver what we promise to ourselves and our customers.
@@ -110,6 +106,8 @@ const Home = ({ }: HomeProps) => {
           </div>
         </div>
       </div>
+
+      <div className='bg-gradient-to-b w-full from-[#cde6ff] to-[#fff] h-[50rem] absolute top-0'></div>
     </main>
   )
 }
